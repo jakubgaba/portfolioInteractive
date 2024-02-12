@@ -9,29 +9,29 @@ export default class Environment {
         this.scene = this.experience.scene;
 
         // this.gui = new GUI({ container: document.querySelector(".hero-main") });
-        this.obj = {
-            colorObj: { r: 0, g: 0, b: 0 },
-            intensity: 3,
-        };
+        // this.obj = {
+        //     colorObj: { r: 0, g: 0, b: 0 },
+        //     intensity: 3,
+        // };
 
         this.setSunlight();
         // this.setGUI();
     }
 
-    setGUI() {
-        this.gui.addColor(this.obj, "colorObj").onChange(() => {
-            this.sunLight.color.copy(this.obj.colorObj);
-            this.ambientLight.color.copy(this.obj.colorObj);
-            console.log(this.obj.colorObj);
-        });
-        this.gui.add(this.obj, "intensity", 0, 10).onChange(() => {
-            this.sunLight.intensity = this.obj.intensity;
-            this.sunLight.ambientLight = this.obj.intensity;
-        });
-    }
+    // setGUI() {
+    //     this.gui.addColor(this.obj, "colorObj").onChange(() => {
+    //         this.sunLight.color.copy(this.obj.colorObj);
+    //         this.ambientLight.color.copy(this.obj.colorObj);
+    //         console.log(this.obj.colorObj);
+    //     });
+    //     this.gui.add(this.obj, "intensity", 0, 10).onChange(() => {
+    //         this.sunLight.intensity = this.obj.intensity;
+    //         this.sunLight.ambientLight = this.obj.intensity;
+    //     });
+    // }
 
     setSunlight() {
-        this.sunLight = new THREE.DirectionalLight("#ffffff", 3);
+        this.sunLight = new THREE.DirectionalLight("#ffffff", 4);
         this.sunLight.castShadow = true;
         this.sunLight.shadow.camera.far = 20;
         this.sunLight.shadow.mapSize.set(2048, 2048);

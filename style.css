@@ -26,13 +26,13 @@ svg{
   /* Light Theme Variables */
   --color-text-light: #333332;
   --color-background-light: #FAF4E5;
-  --color-pink-light: #e5a1aa;
+  --color-pink-light: #727592;
   --color-green-light: #7AD0AC;
   --color-blue-light: #8395CD;
 
   /* Dark Theme Variables */
   --color-text-dark: #FAF4E5;
-  --color-background-dark: #8395CD;
+  --color-background-dark: #0b1430;
 }
 
 .light-theme{
@@ -279,7 +279,7 @@ svg{
 .progress-bar{
   height: 100vh;
   width: 100%;
-  background-color: var(--color-pink);
+  background-color: #87D1DE;
   transform-origin: top center;
   transform: scaleY(1);
 }
@@ -418,16 +418,16 @@ svg{
 
 /* Other colors override */
 
-.blue-text{
-  color: var(--color-blue)
+.puce-text{
+  color: #D8909E
 }
 
-.blue-border{
-  border-color: var(--color-blue);
+.puce-border{
+  border-color: #D8909E;
 }
 
-.blue-background{
-  background-color: var(--color-blue);
+.puce-background{
+  background-color: #D59BA9;
 }
 
 .green-text{
@@ -442,7 +442,16 @@ svg{
   background-color: var(--color-green);
 }
 
+.tiffany-blue{
+  color: #73C8CE;
+}
+.tiffany-blue-border{
+  border-color: #73C8CE;
+}
 
+.tiffany-blue-background{
+  background-color: #73C8CE;
+}
 /* Media Queries */
 
 @media (max-width: 968px){
