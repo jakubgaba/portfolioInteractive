@@ -332,6 +332,7 @@ export default class Preloader extends EventEmitter {
         });
     }
 
+
     onScroll(e) {
         if (e.deltaY > 0) {
             this.removeEventListeners();
@@ -346,7 +347,7 @@ export default class Preloader extends EventEmitter {
     onTouchMove(e) {
         let currentY = e.touches[0].clientY;
         let difference = this.initalY - currentY;
-      
+        console.log(difference)
         if (difference > 0) {
             console.log("swipped up");
             this.removeEventListeners();
@@ -359,11 +360,11 @@ export default class Preloader extends EventEmitter {
         window.removeEventListener("wheel", this.scrollOnceEvent);
         window.removeEventListener("touchstart", this.touchStart);
         window.removeEventListener("touchmove", this.touchMove);
-       
+
     }
 
+ 
     async playIntro() {
-
         this.scaleFlag = true;
         await this.firstIntro();
         this.moveFlag = true;
@@ -371,7 +372,7 @@ export default class Preloader extends EventEmitter {
         this.touchStart = this.onTouch.bind(this);
         this.touchMove = this.onTouchMove.bind(this);
         window.addEventListener("wheel", this.scrollOnceEvent);
-        // window.addEventListener("touchstart", this.touchStart);
+        window.addEventListener("touchstart", this.touchStart);
         window.addEventListener("touchmove", this.touchMove);
     }
     async playSecondIntro() {
