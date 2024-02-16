@@ -400,6 +400,7 @@ svg {
   position: absolute;
   top: calc(50% - 120px);
   right: 0;
+  padding-right: 20%;
   color: var(--color-text);
 }
 
