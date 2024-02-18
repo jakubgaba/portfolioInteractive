@@ -7,6 +7,6 @@ export default [
     {
         name: "screen",
         type: "videoTexture",
-        path: "/textures/mmm.mp4",
+        path: "/textures/matrix.mp4",
     },
 ];

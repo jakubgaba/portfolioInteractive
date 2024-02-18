@@ -88,7 +88,7 @@ export default class Controls {
     setScrollTrigger() {
         ScrollTrigger.matchMedia({
             //Desktop
-            "(min-width: 969px)": () => {
+            "(max-width: 969px)": () => {
                 console.log("fired desktop");
 
                 this.room.scale.set(0.11, 0.11, 0.11);
@@ -173,7 +173,7 @@ export default class Controls {
             },
 
             // Mobile
-            "(max-width: 968px)": () => {
+            "(min-width: 968px)": () => {
                 console.log("fired mobile");
 
                 // Resets
