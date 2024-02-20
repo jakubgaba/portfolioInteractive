@@ -131,11 +131,11 @@ export default class Controls {
                         this.room.position,
                         {
                             x: () => {
-                                return 1;
+                                return -(this.sizes.height * 0.0010);
                             },
                             z: () => {
                                 return this.sizes.height * 0.0032;
-                            },
+                            }
                         },
                         "same"
                     )
@@ -153,6 +153,22 @@ export default class Controls {
                         {
                             width: 0.5 * 4,
                             height: 0.7 * 4,
+                        },
+                        "same"
+                    )
+                    .to(
+                        this.camera.orthographicCamera.rotation,
+                        {
+                            y:-0.71,
+                            z:-0.5
+                        },
+                        "same"
+                    )
+                    .to(
+                        this.camera.orthographicCamera.position,
+                        {
+                            x:-4,
+                            y:7.5
                         },
                         "same"
                     );

@@ -18,7 +18,7 @@ export default class Preloader extends EventEmitter {
             this.device = device;
         });
 
-        this.world.on("worldready", () => {
+        this.world.on("worldready", (e) => {
             this.setAssets();
             this.playIntro();
         });
@@ -363,7 +363,7 @@ export default class Preloader extends EventEmitter {
 
     }
 
- 
+
     async playIntro() {
         this.scaleFlag = true;
         await this.firstIntro();
