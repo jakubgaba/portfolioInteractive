@@ -159,16 +159,16 @@ export default class Controls {
                     .to(
                         this.camera.orthographicCamera.rotation,
                         {
-                            y:-0.71,
-                            z:-0.5
+                            y: -0.71,
+                            z: -0.5
                         },
                         "same"
                     )
                     .to(
                         this.camera.orthographicCamera.position,
                         {
-                            x:-4,
-                            y:7.5
+                            x: -4,
+                            y: 7.5
                         },
                         "same"
                     );
@@ -182,10 +182,23 @@ export default class Controls {
                         scrub: 0.6,
                         invalidateOnRefresh: true,
                     },
-                }).to(this.camera.orthographicCamera.position, {
-                    y: 1.5,
-                    x: -4.1,
-                });
+                }).to(
+                    this.camera.orthographicCamera.position,
+                    {
+                        y: 1.5,
+                        x: -4.1,
+                    },
+                    "same"
+                )
+                    .to(
+                        this.camera.orthographicCamera.rotation,
+                        {
+                            y: 0.2,
+                            z: 0.1
+                        },
+                        "same"
+                    )
+                    ;
             },
 
             // Mobile
@@ -477,7 +490,7 @@ export default class Controls {
             },
         });
     }
-    resize() {}
+    resize() { }
 
-    update() {}
+    update() { }
 }
