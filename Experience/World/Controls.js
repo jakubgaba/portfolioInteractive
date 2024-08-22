@@ -260,6 +260,23 @@ export default class Controls {
                             x: 1.5,
                         },
                         "same"
+                    )
+                    .to(
+                        this.camera.orthographicCamera.rotation,
+                        {
+
+                            y: -0.71,
+                            z: -0.5
+                        },
+                        "same"
+                    )
+                    .to(
+                        this.camera.orthographicCamera.position,
+                        {
+                            x: -6,
+                            y: 7.5
+                        },
+                        "same"
                     );
 
                 // Third section -----------------------------------------
@@ -271,9 +288,28 @@ export default class Controls {
                         scrub: 0.6,
                         invalidateOnRefresh: true,
                     },
-                }).to(this.room.position, {
-                    z: -4.5,
-                });
+                }).to(
+                    this.camera.orthographicCamera.position,
+                    {
+                        
+                        x: 2.0,
+                        y: 6.5,
+                        z: 10
+                    },
+                    "same"
+                )
+                .to(
+                    this.camera.orthographicCamera.rotation,
+                    {
+                        
+                        y:0.2,
+                        z:0.1
+                        
+                    },
+                    "same"
+                )
+               
+                    ;
             },
 
             // all
