@@ -314,6 +314,9 @@ svg {
   margin-top: 64px;
   color: var(--color-text);
 }
+.section-heading .techstack{
+font-size: 30px;
+}
 
 .section-text {
   line-height: 2;
