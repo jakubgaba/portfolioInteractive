@@ -304,9 +304,16 @@ svg {
 .section-detail-wrapper {
   position: relative;
   padding: 20% 5%;
- 
 }
-
+.findmehere {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+}
+.table-container {
+  margin: 0 auto; /* Centers the table horizontally */
+  display: block; /* Ensures that the table is treated as a block-level element */
+}
 .section-heading {
   font-size: 18px;
   font-weight: 700;
