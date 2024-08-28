@@ -326,6 +326,12 @@ svg {
   /* Ensures that the table is treated as a block-level element */
 }
 
+img {
+  display: block;
+  margin: 0 auto 5px;
+  /* Centers the icon and adds space below it */
+}
+
 table {
   width: 100%;
   table-layout: auto;
@@ -334,30 +340,11 @@ table {
 
 td {
   text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   white-space: normal;
-  /* Allows text to wrap */
+  padding: 1px;
   vertical-align: top;
   /* Ensures content is aligned to the top */
-}
-
-img {
-  display: block;
-  margin: 0 auto 5px;
-  /* Centers the icon and adds space below it */
-}
-
-/* Optional: Make the table responsive */
-@media (max-width: 600px) {
-  table {
-    width: 100%;
-  }
-
-  td {
-    width: auto;
-    /* Makes cells flexible */
-  }
 }
 
 .section-heading {
