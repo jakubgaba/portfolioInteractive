@@ -9,7 +9,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
- 
+
 }
 
 /* body{
@@ -295,6 +295,11 @@ svg {
   padding: 20% 5%;
   border-bottom: 2px solid var(--color-pink);
   padding-bottom: 400px;
+  
+  /* Grid Centering */
+  display: grid;
+  place-items: center; /* Centers content both horizontally and vertically */
+  height: 100%; /* Ensure the wrapper takes up the full height */
 }
 
 .section-intro-wrapper:nth-child(3) {
@@ -305,15 +310,56 @@ svg {
   position: relative;
   padding: 20% 5%;
 }
+
 .findmehere {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center;     /* Centers content vertically */
+  justify-content: center;
+  /* Centers content horizontally */
+  align-items: center;
+  /* Centers content vertically */
 }
+
 .table-container {
-  margin: 0 auto; /* Centers the table horizontally */
-  display: block; /* Ensures that the table is treated as a block-level element */
+  margin: 0 auto;
+  /* Centers the table horizontally */
+  display: block;
+  /* Ensures that the table is treated as a block-level element */
 }
+
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  white-space: normal;
+  /* Allows text to wrap */
+  vertical-align: top;
+  /* Ensures content is aligned to the top */
+}
+
+img {
+  display: block;
+  margin: 0 auto 5px;
+  /* Centers the icon and adds space below it */
+}
+
+/* Optional: Make the table responsive */
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+
+  td {
+    width: auto;
+    /* Makes cells flexible */
+  }
+}
+
 .section-heading {
   font-size: 18px;
   font-weight: 700;
@@ -321,8 +367,9 @@ svg {
   margin-top: 64px;
   color: var(--color-text);
 }
-.section-heading .techstack{
-font-size: 30px;
+
+.section-heading .techstack {
+  font-size: 30px;
 }
 
 .section-text {
